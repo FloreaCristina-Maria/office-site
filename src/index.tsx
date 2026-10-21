@@ -28,6 +28,11 @@ app.get("/teapot", (c) => {
 });
 app.get("/home", (c) => c.redirect("/"));
 
+import { stringPages } from "./string-pages";
+
+// step 4: pages from strings
+app.route("/strings", stringPages);
+
 app.notFound((c) => c.json({ error: "Not found", path: c.req.path }, 404));
 
 export default app;
