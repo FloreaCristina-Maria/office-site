@@ -33,6 +33,11 @@ import { stringPages } from "./string-pages";
 // step 4: pages from strings
 app.route("/strings", stringPages);
 
+import { etaPages } from "./eta-pages";
+
+// step 5: pages from an engine
+app.route("/eta", etaPages);
+
 app.notFound((c) => c.json({ error: "Not found", path: c.req.path }, 404));
 
 export default app;
