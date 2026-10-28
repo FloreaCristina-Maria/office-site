@@ -5,6 +5,10 @@ import { logger } from "hono/logger";
 const app = new Hono();
 app.use(logger());
 
+import { serveStatic } from "@hono/bun";
+
+app.use("*", serveStatic({ root: "./public" }));
+
 import { team } from "./data";
 import { Layout } from "./views/Layout";
 
