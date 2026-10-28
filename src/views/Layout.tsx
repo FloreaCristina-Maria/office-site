@@ -19,6 +19,7 @@ export function Layout({ title, children }: LayoutProps) {
         <body>
           <nav>
             <a href="/">Home</a> · <a href="/team">Team</a>
+            <a href="/">Home</a> · <a href="/team">Team</a> · <a href="/about">About</a>
           </nav>
           <main>{children}</main>
           <footer>Office site · week 2</footer>
